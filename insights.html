@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="MONO AI 影像工作室知識頁：AI 廣告跟傳統拍攝差在哪、為什麼堅持原生直式 9:16、交片前逐幀檢查的 5 件事。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="知識頁｜MONO AI 影像工作室" />
+    <meta property="og:description" content="AI 廣告跟傳統拍攝差在哪、為什麼堅持原生直式 9:16、交片前逐幀檢查的 5 件事。" />
+    <meta property="og:url" content="https://mono-ai-studio.netlify.app/insights.html" />
+    <title>知識頁｜MONO AI 影像工作室</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f5f1e8; --bg-soft: #efe9dc; --surface: #fbf8f1;
+        --ink: #1b1811; --ink-soft: #57503f; --line: #d9d0ba;
+        --gold: #96762f; --gold-bright: #b08d3e;
+        color-scheme: light;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Noto Sans TC", sans-serif; line-height: 1.85; }
+      .wrap { max-width: 820px; margin: 0 auto; padding: 0 22px 90px; }
+      nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+      nav .brand { font-family: "Noto Serif TC", serif; font-weight: 700; letter-spacing: .14em; color: var(--ink); text-decoration: none; }
+      nav .brand small { display: block; font-family: "Noto Sans TC", sans-serif; font-weight: 400; font-size: 11.5px; letter-spacing: .3em; color: var(--gold); }
+      nav a.back { color: var(--ink-soft); text-decoration: none; font-size: 14.5px; }
+      nav a.back:hover { color: var(--gold); }
+      header.page { padding: 54px 0 8px; }
+      header.page .no { font-size: 12.5px; letter-spacing: .3em; color: var(--gold); margin-bottom: 12px; }
+      header.page h1 { font-family: "Noto Serif TC", serif; font-size: clamp(28px, 5vw, 40px); font-weight: 700; line-height: 1.35; margin: 0 0 14px; }
+      header.page p { color: var(--ink-soft); margin: 0; max-width: 36em; }
+      article { padding: 44px 0 8px; border-bottom: 1px solid var(--line); }
+      article:last-of-type { border-bottom: none; }
+      article .no { font-size: 12px; letter-spacing: .3em; color: var(--gold); margin-bottom: 10px; }
+      article h2 { font-family: "Noto Serif TC", serif; font-size: clamp(21px, 3.4vw, 27px); font-weight: 600; margin: 0 0 16px; line-height: 1.45; }
+      article p { margin: 0 0 14px; color: var(--ink); }
+      article p.soft { color: var(--ink-soft); }
+      table { width: 100%; border-collapse: collapse; margin: 18px 0 20px; font-size: 15px; background: var(--surface); }
+      th, td { border: 1px solid var(--line); padding: 11px 14px; text-align: left; vertical-align: top; }
+      th { font-family: "Noto Serif TC", serif; font-weight: 600; background: var(--bg-soft); }
+      td.k { font-weight: 500; white-space: nowrap; }
+      ol.checks { margin: 6px 0 16px; padding-left: 1.4em; }
+      ol.checks li { margin-bottom: 10px; }
+      ol.checks b { font-family: "Noto Serif TC", serif; }
+      .cases { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px; }
+      .cases span { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 7px 16px; font-size: 14px; }
+      .cta { margin-top: 52px; border: 1px solid var(--line); background: var(--surface); border-radius: 18px; padding: clamp(24px, 4vw, 38px); text-align: center; }
+      .cta h3 { font-family: "Noto Serif TC", serif; font-size: clamp(19px, 2.6vw, 24px); margin: 0 0 10px; }
+      .cta p { color: var(--ink-soft); margin: 0 0 20px; }
+      .btn { display: inline-flex; align-items: center; padding: 13px 28px; border-radius: 999px; text-decoration: none; font-size: 15px; font-weight: 500; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); margin: 4px; }
+      .btn.ghost { background: transparent; color: var(--ink); }
+      footer { margin-top: 54px; text-align: center; color: var(--ink-soft); font-size: 13px; letter-spacing: .08em; }
+      .line-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: var(--bg); text-decoration: none; font-size: 14.5px; font-weight: 500; letter-spacing: .06em; padding: 13px 22px; border-radius: 999px; border: 1px solid var(--gold); box-shadow: 0 10px 28px rgba(20,16,6,.28); }
+      .line-float::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold-bright); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">MONO<small>AI 影像工作室</small></a>
+        <a class="back" href="index.html">← 回官網</a>
+      </nav>
+
+      <header class="page">
+        <div class="no">INSIGHTS — 知識頁</div>
+        <h1>先搞懂，再決定。</h1>
+        <p>做廣告之前，先把三件事講清楚：AI 廣告跟傳統拍攝差在哪、為什麼我們堅持原生直式、以及一支片交到你手上之前，我們到底檢查了什麼。</p>
+      </header>
+
+      <article>
+        <div class="no">01 — COMPARISON</div>
+        <h2>AI 廣告跟傳統拍攝，差在哪？</h2>
+        <p>不是誰取代誰，而是適合的題目不同。短影音廣告講究節奏、上架速度與預算效率，這正是 AI 製作最合身的地方。</p>
+        <table>
+          <tr><th>項目</th><th>傳統拍攝</th><th>AI 製作（MONO）</th></tr>
+          <tr><td class="k">場地與團隊</td><td>租棚、請演員、組攝影團隊，還要等檔期與天氣</td><td>全程線上完成，場景、人物、光線由生成與導演把關決定</td></tr>
+          <tr><td class="k">成本結構</td><td>人力與場地是大頭，開拍後改動成本高</td><td>成本大幅下降，方案價格公開透明（見官網方案區）</td></tr>
+          <tr><td class="k">交期</td><td>排檔期、拍攝、後製，一關等一關</td><td>腳本確認後直接進入生成與剪輯，流程不被檔期卡住</td></tr>
+          <tr><td class="k">修改彈性</td><td>重拍等於重組團隊、重付一次成本</td><td>在生成與剪輯階段調整，方案內含 2 次修改</td></tr>
+          <tr><td class="k">場景限制</td><td>受地點、季節、時段與天氣限制</td><td>異國場景、季節氛圍皆可建構；產品一致性以資產規格卡鎖定把關</td></tr>
+        </table>
+        <p class="soft">誠實說：需要真實大場面、真人實拍質感的題目，傳統拍攝仍有不可取代的價值。MONO 專注的，是品牌每天都要用的短影音廣告。</p>
+      </article>
+
+      <article>
+        <div class="no">02 — FORMAT</div>
+        <h2>為什麼堅持「原生直式 9:16」，不用橫式裁切？</h2>
+        <p>Reels、Shorts、TikTok 都是全螢幕直式。把橫式影片裁成直式，畫面會被放大切掉——主角的臉剩一半、產品被切出框外，是我們實際踩過、也最常見的翻車方式。</p>
+        <p>原生直式從構圖就不同：主體置中、上下預留乾淨的留白給品牌字與平台介面，產品特寫在直式畫面裡反而更有存在感。所以 MONO 的每一支片，從分鏡第一格就是為直式而畫，不是拍完再裁。</p>
+      </article>
+
+      <article>
+        <div class="no">03 — QUALITY</div>
+        <h2>交片前，我們逐幀檢查的 5 件事</h2>
+        <p>AI 會生成畫面，但質感來自把關。每一支 MONO 的片交付前，都過這五關：</p>
+        <ol class="checks">
+          <li><b>產品一致性</b>——同一支錶的錶面、同一瓶香水的瓶身，跨鏡頭必須是同一件，不變形、不換色。</li>
+          <li><b>手與物理</b>——手指數量、持握方式、動作幅度，全部對照真實世界的物理檢查。</li>
+          <li><b>連貫性</b>——人物、服裝、場景跨集不變；系列片以尾幀接首幀串連，不是一段段素材硬湊。</li>
+          <li><b>聲音對位</b>——配音、音樂重拍、環境音與畫面同步，剪輯點落在音樂的拍點上。</li>
+          <li><b>品牌收尾</b>——角標、字體、色調全片一致，結尾留白，不硬塞標語。</li>
+        </ol>
+        <p class="soft">這一頁寫的是「我們檢查什麼」。檢查不過如何修復，是 MONO 交付流程與課程裡的內容——先讓你知道標準在哪，成品你自己驗。</p>
+      </article>
+
+      <article>
+        <div class="no">04 — WORKS INDEX</div>
+        <h2>案例索引</h2>
+        <p>工作室累積 58 件影像作品，橫跨六大產業。精選成品在官網作品區可直接播放，完整作品集在 Instagram 持續更新。</p>
+        <div class="cases">
+          <span>美妝香水</span><span>精品腕錶</span><span>高端餐飲</span><span>房地產預售</span><span>醫美診所</span><span>電商產品</span><span>手搖飲</span><span>時尚服飾</span>
+        </div>
+        <p class="soft">近期公開作品：手搖飲廣告《夢殿珍珠奶茶》、日用品廣告《青春口香糖》、男裝形象廣告《冬日系列》——都在官網作品區看得到。</p>
+      </article>
+
+      <div class="cta">
+        <h3>下一支被記住的廣告，從一次對話開始。</h3>
+        <p>把產品照（1–2 張）傳到 LINE，再加一句你想要的感覺，MONO 回覆你適合的片型與報價範圍。諮詢免費。</p>
+        <a class="btn" href="https://line.me/R/oaMessage/@194mwdfd/" target="_blank" rel="noopener">LINE 諮詢</a>
+        <a class="btn ghost" href="index.html#plans">看合作方案</a>
+      </div>
+
+      <footer>MONO AI 影像工作室 — AI 短影音廣告 ・ 品牌形象片<br />© 2026 MONO AI Studio</footer>
+    </div>
+    <a class="line-float" href="https://line.me/R/oaMessage/@194mwdfd/" target="_blank" rel="noopener" aria-label="用 LINE 諮詢">LINE 諮詢</a>
+    <script>
+      (function () {
+        var links = document.querySelectorAll('a[href*="line.me/R/"]');
+        if (!links.length) { return; }
+        if (!/iphone|ipad|ipod|android/i.test(navigator.userAgent || '')) { return; }
+        links.forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            e.preventDefault();
+            var fallback = a.href;
+            var timer = setTimeout(function () { window.location.href = fallback; }, 900);
+            function cancel() { clearTimeout(timer); }
+            window.addEventListener('pagehide', cancel, { once: true });
+            document.addEventListener('visibilitychange', function () { if (document.hidden) { cancel(); } });
+            window.location.href = 'line://oaMessage/@194mwdfd/';
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
